@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harsh Vardhan | My Personal Website</title>
+<style>
+:root{--bg:#f2f9ee;--ink:#10261a;--muted:#46604f;--green:#1f8a46;--green2:#14602f;--card:#fff;--line:#b8dcaa;--soft:#dff1d6;--hero1:#1f8a46;--hero2:#0f4d27;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1a10;--ink:#e8f5e1;--muted:#a3bfa9;--green:#5fd384;--green2:#3fae63;--card:#13271a;--line:#27472f;--soft:#1a3523;--hero1:#1b6b3a;--hero2:#0c2d19}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.65;min-height:100vh}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--card);border-bottom:2px solid var(--line);padding:12px 5%;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:10}
+.brand{font-weight:800;font-size:1.15rem;color:var(--green);text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:6px}
+nav a{color:var(--ink);text-decoration:none;padding:6px 12px;border-radius:999px;font-size:.92rem}
+nav a:hover{background:var(--soft)}
+nav a.on{background:var(--green);color:#fff}
+main{max-width:960px;margin:0 auto;padding:28px 16px 56px}
+.page{display:none}
+.page.show{display:block}
+.hero{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:#fff;border-radius:24px;padding:44px 28px;text-align:center}
+.hero .avatar{width:92px;height:92px;border-radius:50%;background:#fff;color:var(--green2);font-size:2.6rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.hero h1{margin:0;font-size:clamp(2rem,7vw,3.2rem)}
+.hero p{margin:8px auto 0;max-width:46ch;font-size:1.05rem;opacity:.95}
+h2{color:var(--green);font-size:1.7rem;margin:0 0 14px}
+h3{margin:0 0 4px;color:var(--green2)}
+.lead{color:var(--muted);margin:26px 0 12px;font-size:1.05rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.tile{display:block;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:20px;text-decoration:none;color:var(--ink);transition:transform .15s,border-color .15s}
+.tile:hover{transform:translateY(-3px);border-color:var(--green)}
+.tile .ic{font-size:2rem}
+.tile b{display:block;font-size:1.15rem;color:var(--green2);margin-top:6px}
+.tile span{color:var(--muted);font-size:.95rem}
+.box{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:22px}
+table{width:100%;border-collapse:collapse}
+td{padding:11px 6px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+td:first-child{color:var(--green2);font-weight:700;width:40%}
+.fam{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:20px;text-align:center}
+.fam .ic{font-size:2.4rem}
+.fam p{margin:0;color:var(--muted);font-size:.95rem}
+.fam b{font-size:1.1rem}
+.school{font-size:1.6rem;font-weight:800;color:var(--green2);margin:0 0 6px}
+.dots{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.dot{width:64px;height:64px;border-radius:50%;border:3px solid var(--card);box-shadow:0 0 0 2px var(--line)}
+.back{display:inline-block;margin-top:22px;color:var(--green2);font-weight:700;text-decoration:none}
+.back:hover{text-decoration:underline}
+footer{text-align:center;padding:20px;color:var(--muted);border-top:2px solid var(--line)}
+.box p{margin:0 0 12px}
+.box p:last-child{margin-bottom:0}
+a:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+</style>
+</head>
+<body>
+<header>
+<a class="brand" href="#home">🌿 Harsh Vardhan</a>
+<nav id="nav">
+<a href="#home" data-p="home">Home</a>
+<a href="#about" data-p="about">About Me</a>
+<a href="#family" data-p="family">My Family</a>
+<a href="#school" data-p="school">My School</a>
+<a href="#colour" data-p="colour">Favourite Colour</a>
+<a href="#thoughts" data-p="thoughts">My Thoughts</a>
+<a href="#goals" data-p="goals">My Aim</a>
+</nav>
+</header>
+
+<main>
+<section class="page" id="p-home">
+<div class="hero">
+<div class="avatar">H</div>
+<h1>Hi, I’m Harsh Vardhan!</h1>
+<p>Welcome to my personal website. Tap any box below to explore more about me.</p>
+</div>
+<p class="lead">Where would you like to go?</p>
+<div class="grid">
+<a class="tile" href="#about"><div class="ic">🙋</div><b>About Me</b><span>Who I am and where I live</span></a>
+<a class="tile" href="#family"><div class="ic">👨‍👩‍👧‍👦</div><b>My Family</b><span>Meet my mom, dad, sister and brother</span></a>
+<a class="tile" href="#school"><div class="ic">🏫</div><b>My School</b><span>Where I study</span></a>
+<a class="tile" href="#colour"><div class="ic">💚</div><b>Favourite Colour</b><span>Guess which one!</span></a>
+<a class="tile" href="#thoughts"><div class="ic">💭</div><b>My Thoughts</b><span>What I believe and value</span></a>
+<a class="tile" href="#goals"><div class="ic">🎯</div><b>My Aim</b><span>Where I want to go in life</span></a>
+</div>
+</section>
+
+<section class="page" id="p-about">
+<h2>About Me</h2>
+<div class="box" style="margin-bottom:16px">
+<h3>A little introduction</h3>
+<p>Hello, and welcome! My name is Harsh Vardhan. I am a student at Manas International School, and I live in Bahadurpur, Laheriasarai, in the state of Bihar. This website is my small corner of the internet, where I get to introduce myself in my own words.</p>
+<p>I believe a person is more than a name and an address. We are made up of the people who raise us, the place we grow up in, the things we learn and the dreams we carry. On this page and the ones that follow, I have tried to share a little of all of these.</p>
+<p>I am still a student, which means I am still learning. I try to stay curious, ask questions when I do not understand something, and keep working on it until it makes sense.</p>
+</div>
+<div class="box">
+<h3>Quick facts</h3>
+<table>
+<tr><td>Name</td><td>Harsh Vardhan</td></tr>
+<tr><td>School</td><td>Manas International School</td></tr>
+<tr><td>Lives in</td><td>Bahadurpur, Laheriasarai, Bihar</td></tr>
+<tr><td>Favourite colour</td><td>Green 💚</td></tr>
+</table>
+</div>
+<a class="back" href="#home">← Back to Home</a>
+</section>
+
+<section class="page" id="p-family">
+<h2>My Family</h2>
+<div class="grid">
+<div class="fam"><div class="ic">👩</div><b>Pratima Kumari</b><p>My mother</p></div>
+<div class="fam"><div class="ic">👨</div><b>Surya Kumar Mehto</b><p>My father</p></div>
+<div class="fam"><div class="ic">👧</div><b>Sakshi Priya</b><p>My sister</p></div>
+<div class="fam"><div class="ic">👦</div><b>Shaurya Vardhan</b><p>My brother</p></div>
+</div>
+<div class="box" style="margin-top:16px">
+<h3>Why my family matters to me</h3>
+<p>My family is where I first learned how to speak, how to be kind and how to keep trying. My parents work hard so that my brother, my sister and I can study and grow. Growing up with my sister and brother has taught me how to share, how to argue and then make up, and how to stand by each other.</p>
+<p>Whatever I achieve in life, I know it will not be only because of me. It will be because of the support, the sacrifices and the blessings of the people in this family.</p>
+</div>
+<a class="back" href="#home">← Back to Home</a>
+</section>
+
+<section class="page" id="p-school">
+<h2>My School</h2>
+<div class="box">
+<p class="school">Manas International School</p>
+<p>This is the school where I study and learn something new every day.</p>
+<p>A school is not only a building with classrooms. It is a place where we learn how to think, how to work with others, how to respect our teachers and how to handle both success and failure. Every subject I study adds one more piece to the way I understand the world.</p>
+<p>I am thankful to my teachers for their patience and to my classmates for making each day more enjoyable.</p>
+</div>
+<a class="back" href="#home">← Back to Home</a>
+</section>
+
+<section class="page" id="p-colour">
+<h2>My Favourite Colour</h2>
+<div class="box">
+<h3>Green 💚</h3>
+<p>Green is my favourite colour. That’s why this whole website is green!</p>
+<div class="dots">
+<div class="dot" style="background:#a8e6a1"></div>
+<div class="dot" style="background:#5fd384"></div>
+<div class="dot" style="background:#1f8a46"></div>
+<div class="dot" style="background:#14602f"></div>
+<div class="dot" style="background:#0c2d19"></div>
+</div>
+</div>
+<a class="back" href="#home">← Back to Home</a>
+</section>
+<section class="page" id="p-thoughts">
+<h2>My Thoughts</h2>
+<div class="box" style="margin-bottom:16px">
+<h3>On learning</h3>
+<p>I think learning never really ends. Marks and exams are important, but the real goal of studying is to understand things well enough that they stay with us for life. When I take the time to understand a topic instead of just memorising it, I feel more confident and I remember it for longer.</p>
+</div>
+<div class="box" style="margin-bottom:16px">
+<h3>On hard work</h3>
+<p>Talent can give a person a start, but hard work is what carries them forward. Big goals are reached through small efforts repeated every day. Some days the work feels slow, but I try to remind myself that slow progress is still progress.</p>
+</div>
+<div class="box" style="margin-bottom:16px">
+<h3>On kindness and respect</h3>
+<p>I believe that how we treat people says more about us than what we own or what we score. Being polite, honest and helpful costs nothing, yet it can make someone’s whole day better. I want to be a person others can trust.</p>
+</div>
+<div class="box">
+<h3>On time</h3>
+<p>Time is the one thing we cannot get back once it is gone. I am learning to use it wisely: to study when it is time to study, to rest when it is time to rest, and to spend some of it with the people I love.</p>
+</div>
+<a class="back" href="#home">← Back to Home</a>
+</section>
+
+<section class="page" id="p-goals">
+<h2>My Aim</h2>
+<div class="box" style="margin-bottom:16px">
+<h3>Looking ahead</h3>
+<p>My aim is to keep learning, to grow into a responsible and honest person, and to make my family proud. I want to work with discipline, to stay focused on my studies and to never lose the habit of asking “why?”.</p>
+</div>
+<div class="box" style="margin-bottom:16px">
+<h3>What I promise myself</h3>
+<table>
+<tr><td>Study</td><td>Understand, not just memorise</td></tr>
+<tr><td>Effort</td><td>Work a little every single day</td></tr>
+<tr><td>Character</td><td>Be honest and respectful</td></tr>
+<tr><td>Family</td><td>Always make them proud</td></tr>
+</table>
+</div>
+<div class="box">
+<h3>A closing note</h3>
+<p>Thank you for taking the time to read about me. I hope this page gave you a good picture of who I am. I am still growing, and I am excited to see where my journey takes me.</p>
+</div>
+<a class="back" href="#home">← Back to Home</a>
+</section>
+</main>
+
+<footer>Made by Harsh Vardhan · Thank you for visiting!</footer>
+
+<script>
+(function(){
+var pages=["home","about","family","school","colour","thoughts","goals"];
+function show(){
+var h=(location.hash||"").replace("#","");
+if(pages.indexOf(h)<0)h="home";
+pages.forEach(function(p){
+document.getElementById("p-"+p).classList.toggle("show",p===h);
+});
+var links=document.querySelectorAll("#nav a");
+for(var i=0;i<links.length;i++){links[i].classList.toggle("on",links[i].getAttribute("data-p")===h);}
+window.scrollTo(0,0);
+}
+window.addEventListener("hashchange",show);
+show();
+})();
+</script>
+</body>
+</html>
